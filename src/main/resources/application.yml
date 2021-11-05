@@ -1,0 +1,12 @@
+server:
+  port: 8399
+
+spring:
+  liquibase:
+    user: postgres
+    password: localPostgres
+    change-log: 'classpath:db-migrations/changelog.xml'
+  datasource:
+    url: "jdbc:postgresql://localhost:54320/postgres?currentSchema=public"
+    username: postgres
+    password: localPostgres
