@@ -1,6 +1,6 @@
 package ru.taxi.orderprocessor.entity;
 
-public class DriverEntity {
+public class DriverEntity extends BaseEntity {
 
     private String firstName;
     private String secondName;

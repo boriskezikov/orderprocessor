@@ -4,5 +4,6 @@
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
 
     <include file="2021-11-04--01--init-db-schema.xml" relativeToChangelogFile="true"/>
+    <include file="2021-11-07--01--update-car-table.xml" relativeToChangelogFile="true"/>
 
 </databaseChangeLog>
