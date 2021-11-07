@@ -6,7 +6,6 @@ public class OrderEntity extends BaseEntity {
     private ClientEntity client;
 
     private PriceStrategyEntity priceStrategy;
-    private RouteEntity route;
     private RateEntity rateEntity;
 
     private OrderStatus status;
