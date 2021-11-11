@@ -5,5 +5,6 @@
 
     <include file="2021-11-04--01--init-db-schema.xml" relativeToChangelogFile="true"/>
     <include file="2021-11-07--01--update-car-table.xml" relativeToChangelogFile="true"/>
+    <include file="2021-11-11--01--update-car-table-set-unique-number.xml" relativeToChangelogFile="true"/>
 
 </databaseChangeLog>

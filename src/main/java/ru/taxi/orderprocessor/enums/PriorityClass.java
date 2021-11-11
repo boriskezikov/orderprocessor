@@ -2,6 +2,12 @@ package ru.taxi.orderprocessor.enums;
 
 import ru.taxi.orderprocessor.entity.CarEntity;
 
+
+/**
+ * Do not change order!
+ */
+
+//TODO move to DB
 public enum PriorityClass {
     STANDARD,
     COMFORT,
