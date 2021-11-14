@@ -30,10 +30,10 @@ public class CarOperationsController {
     }
 
     @PutMapping
-    public CarDto updateCar(@RequestBody CarCreateUpdateOperationDto carDto) {
-        log.debug("createCar.in - dto: {}", carDto);
+    public CarDto updateCar(@Valid @RequestBody CarCreateUpdateOperationDto carDto) {
+        log.debug("updateCar.in - dto: {}", carDto);
         var carEntity = carOperationsService.update(carDto);
-        log.debug("createCar.out - response: {}", carEntity);
+        log.debug("updateCar.out - response: {}", carEntity);
         return carEntity;
     }
 
