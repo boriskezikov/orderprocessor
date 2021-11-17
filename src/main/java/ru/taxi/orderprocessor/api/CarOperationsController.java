@@ -2,6 +2,8 @@ package ru.taxi.orderprocessor.api;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -9,9 +11,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import ru.taxi.orderprocessor.dto.CarCreateUpdateOperationDto;
 import ru.taxi.orderprocessor.dto.CarDto;
+import ru.taxi.orderprocessor.dto.FindCarsCriteria;
 import ru.taxi.orderprocessor.logic.CarOperationsService;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @Slf4j
 @RestController
@@ -35,6 +39,16 @@ public class CarOperationsController {
         var carEntity = carOperationsService.update(carDto);
         log.debug("updateCar.out - response: {}", carEntity);
         return carEntity;
+    }
+
+    @GetMapping("/{number}")
+    public CarDto findCarByNumber(@PathVariable String number) {
+        return carOperationsService.findByNumber(number);
+    }
+
+    @PostMapping("/find")
+    public List<CarDto> findCars(@RequestBody FindCarsCriteria findCarsCriteria) {
+        return carOperationsService.find(findCarsCriteria);
     }
 
 }
